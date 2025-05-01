@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+.dfda {
+  background-color: #f52b4d;
+}
+
+.default-container {
+  @apply bg-pink-200
+}
+
+button {
+  @apply cursor-pointer
+}
+
+.default-padding {
+  @apply p-4 md:p-8 lg:py-6 lg:px-16
+}
+
+.orange-guy {
+  @apply py-2 px-4 bg-orange-500 font-semibold hover:shadow-md hover:shadow-pink-400 text-white rounded-3xl w-fit
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-in-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.8s ease-in-out;
+}
+/* <svg xmlns="http://www.w3.org/2000/svg" width="1439" height="360"><g fill="#FFF0EC" fill-rule="evenodd" opacity=".071" transform="translate(-171 -373)"><rect width="310.431" height="708" x="205" y="410" rx="155.215" transform="scale(1 -1) rotate(-45 -1484.244 0)"/><rect width="310.431" height="708" x="1269" y="7" rx="155.215" transform="scale(1 -1) rotate(-45 552.684 0)"/></g></svg> */
