@@ -8,6 +8,8 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
+import { motion } from "framer-motion";
+
 const nav = ["Pricing", "Product", "About Us", "Careers", "Community"];
 
 
@@ -71,7 +73,12 @@ const App: React.FC = () => {
         </nav>
 
         <div className="p-4 md:p-8 lg:py-6 lg:px-16 lg:h-screen w-full flex flex-col lg:flex-row gap-12 justify-between items-center pt-20">
-          <div className="grid gap-4 text-pretty animate-fade-in">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="grid gap-4 text-pretty animate-fade-in"
+          >
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950">
               Get Started Bring everyone together to build better products
             </h1>
@@ -80,14 +87,24 @@ const App: React.FC = () => {
               while keeping the larger team goals in view.
             </p>
             <button className="orange-guy hidden lg:block">Get Started</button>
-          </div>
-          <div className="lg:w-2/3 animate-fade-in">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="lg:w-2/3 animate-fade-in"
+          >
             <img src="/illustration-intro.svg" alt="" />
-          </div>
+          </motion.div>
         </div>
 
         <div className="default-padding flex flex-col lg:flex-row gap-12 justify-between items-start animate-fade-in">
-          <div className="grid gap-3">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="grid gap-3"
+          >
             <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-blue-950">
               What's different about Manage?
             </h1>
@@ -96,10 +113,16 @@ const App: React.FC = () => {
               complexity. Our software is tailor-made for modern digital product
               teams
             </p>
-          </div>
+          </motion.div>
           <div className="grid gap-6">
             {listManage.map((e, index) => (
-              <div className="flex items-baseline gap-4" key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="flex items-baseline gap-4"
+                key={index}
+              >
                 <div className="py-2 px-6 bg-orange-500 rounded-3xl font-bold text-white">
                   {e.id}
                 </div>
@@ -107,19 +130,30 @@ const App: React.FC = () => {
                   <span className="text-blue-950 font-semibold">{e.name}</span>
                   <span className="text-gray-600">{e.cap}</span>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         <div className="flex flex-col gap-16 default-padding justify-center items-center animate-fade-in">
-          <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-blue-950 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-xl md:text-2xl lg:text-4xl font-bold text-blue-950 text-center"
+          >
             What's different about Manage?
-          </h1>
+          </motion.h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {testimonials.map((e, index) => (
-              <div className="my-4 lg:my-0" key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="my-4 lg:my-0"
+                key={index}
+              >
                 <div className="bg-[#F1F1F3] p-4 rounded-xl text-center flex items-center flex-col justify-center relative gap-4">
                   <img
                     src={e.img}
@@ -135,7 +169,7 @@ const App: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -143,17 +177,27 @@ const App: React.FC = () => {
         </div>
 
         <div className="bg-[url(/bg-simplify-section-desktop.svg)] bg-cover w-full animate-fade-in">
-          <div className="flex flex-col justify-between items-center lg:flex-row gap-4 bg-orange-600 p-4 md:p-8 lg:py-12 lg:px-32">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col justify-between items-center lg:flex-row gap-4 bg-orange-600 p-4 md:p-8 lg:py-12 lg:px-32"
+          >
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white lg:w-1/2">
               Get Started Simplify how your team works today.
             </h1>
             <button className="w-fit py-2 px-5 h-fit rounded-3xl bg-white text-orange-600">
               Get Started
             </button>
-          </div>
+          </motion.div>
         </div>
 
-        <footer className="flex flex-col-reverse lg:flex-row justify-between items-center p-4 md:p-8 lg:py-12 lg:px-32 bg-blue-950 w-full gap-10 animate-fade-in">
+        <motion.footer
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col-reverse lg:flex-row justify-between items-center p-4 md:p-8 lg:py-12 lg:px-32 bg-blue-950 w-full gap-10 animate-fade-in"
+        >
           <div className="grid gap-4">
             <img
               src="/logo.svg"
@@ -198,7 +242,7 @@ const App: React.FC = () => {
             />
             <button className="orange-guy">Go</button>
           </div>
-        </footer>
+        </motion.footer>
       </div>
     </div>
   );
